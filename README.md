@@ -1,3 +1,19 @@
+Project Details:
+
+This facebook clone has 2 additional pages 1:Home and 2:Profile
+
+Homepage :
+In Home page you can visit as shaon. you can like any of this posts and also comment what you want
+you can visit profile page 
+
+Live Demo : https://shaonfbclone.netlify.app
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
