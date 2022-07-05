@@ -23,7 +23,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.posts .post .contents .images img {
+  object-fit: cover;
+  width: 100%;
+  pointer-events: none;
+  grid-column: span 2;
+}
 .App-link {
   color: #61dafb;
 }
