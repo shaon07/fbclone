@@ -105,9 +105,9 @@ div#root {
   color: gray;
 }
 
-.top-header .row-2 nav ul li.active {
+/* .top-header .row-2 nav ul li.active {
   border-bottom: 2px solid var(--primaryColor);
-}
+} */
 
 .create-status {
   border-bottom: 1px solid var(--tertierColor);
@@ -416,6 +416,32 @@ div#root {
 .commentBox h3 {
   font-weight: 500;
   text-align: left;
+}
+
+.searchBar {
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 10px;
+  align-items: center;
+}
+.searchBar i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+nav ul li {
+  cursor: pointer;
+}
+.searchBox {
+  width: 100%;
+}
+.searchBar input {
+  width: 100% !important;
+  border: 1px solid #80808042;
+  padding: 5px 10px;
+  border-radius: 40px;
+}
+.menus {
+  cursor: pointer;
 }
 /* Utility Class */
 
