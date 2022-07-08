@@ -39,8 +39,12 @@ const Header = () => {
               <Link to="/">
                 <li className={` bi bi-house-door `}></li>
               </Link>
-              <li className="bi bi-people"></li>
-              <li className="bi bi-collection-play"></li>
+              <Link to="/custom/friends">
+                <li className="bi bi-people"></li>
+              </Link>
+              <Link to="/custom/video">
+                <li className="bi bi-collection-play"></li>
+              </Link>
               <Link to="/profile">
                 <li>
                   <img
@@ -50,8 +54,12 @@ const Header = () => {
                   />
                 </li>
               </Link>
-              <li className="bi bi-bell"></li>
-              <li className="bi bi-list"></li>
+              <Link to="/custom/notifications">
+                <li className="bi bi-bell"></li>
+              </Link>
+              <Link to="/custom/menu">
+                <li className="bi bi-list"></li>
+              </Link>
             </ul>
           </nav>
         </div>

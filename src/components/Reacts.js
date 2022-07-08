@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import database from "../database/users";
 const Reacts = ({ like }) => {
-  const [likes, setLike] = useState(true);
+  const [likes, setLike] = useState(1);
   const [show, setShow] = useState(true);
   const allComments = [];
   const [comment, setComment] = useState([...allComments]);
   const [userComment, setUserComment] = useState();
+  const searchInput = useRef(null);
   return (
     <>
       <div className="flex between center gray bortom-1 pb-13 container">
@@ -25,10 +26,18 @@ const Reacts = ({ like }) => {
         <p>60 Comments &bullet; 33 Shares</p>
       </div>
       <ul className="actions gray">
-        <li onClick={() => setLike(2)}>
-          <i className="bi bi-hand-thumbs-up"></i> Like
+        <li onClick={() => setLike(likes === 1 ? 2 : 1)}>
+          <i
+            className={`fa-${likes === 1 ? "regular" : "solid"} fa-thumbs-up`}
+          ></i>{" "}
+          Like
         </li>
-        <li onClick={() => setShow(!show)}>
+        <li
+          onClick={() => {
+            setShow(!show);
+            searchInput.current.focus();
+          }}
+        >
           <i className="bi bi-chat"></i> Comment
         </li>
         <li>
@@ -62,11 +71,12 @@ const Reacts = ({ like }) => {
               onSubmit={(e) => {
                 e.preventDefault();
                 setComment([...comment, userComment]);
-                setUserComment('')
+                setUserComment("");
               }}
             >
               <input
                 type="text"
+                ref={searchInput}
                 value={userComment}
                 onChange={(e) => setUserComment(e.target.value)}
                 placeholder="Write a public comment"

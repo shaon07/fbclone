@@ -1,5 +1,7 @@
+import CreateStatus from '../components/CreateStatus';
 import database from "../database/users";
 import Header from "./Header";
+import Posts from './Posts';
 
 const Profile = () => {
   return (
@@ -71,6 +73,8 @@ const Profile = () => {
               </button>
             </div>
           </div>
+          <CreateStatus />
+          <Posts />
         </div>
       </div>
     </>
